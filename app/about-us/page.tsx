@@ -1,6 +1,10 @@
 import Navigation from "../../components/navigation";
 import Avatar from "./components/avatar";
 
+export const metadata = {
+    title: "About Us"
+}
+
 export default function AboutUs() {
     return (
         <div>
