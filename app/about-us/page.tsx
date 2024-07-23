@@ -4,7 +4,6 @@ import Avatar from "./components/avatar";
 export default function AboutUs() {
     return (
         <div>
-            <Navigation/>
             <h1>About us!</h1>
             {/* <h1>About us! <Avatar/> </h1> */}
         </div>
