@@ -2,13 +2,12 @@ export const metadata = {
     title: "Home"
 }
 
-//server component에서 NEXTJS는 우리가 fetch한 걸 기억해주기 떄문에 한번만 로딩함! 첫번째 fetch만 API에 요청하는 거임
-// 근데 이런경우 헤더부분이나 타이틀부분까지 같이 로딩이 걸려버리는 문제점이 있음띠
+// server componenet에서 fetch하는 중에 loading파일을 제공해주면 알아서 로딩파일이 페이지에 나타남
 const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
     // console.log("im fetching!");
-    await new Promise((resolve) => setTimeout(resolve, 5000)); //로딩시간 5초
+    await new Promise((resolve) => setTimeout(resolve, 10000)); //로딩시간 10초
     const response = await fetch(URL);
     const json = await response.json();
     return json;
