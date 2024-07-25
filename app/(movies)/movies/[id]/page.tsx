@@ -19,8 +19,8 @@ async function getMovieTest(id: string) {
  }*/
 
 
- //Promise.all을 사용하지않고 각각 컴포넌트로 정리해주고 render해줌
- // 여기서 중요한 점dms <Suspense>로 감싸준점!!!
+ // Promise.all을 사용하지않고 병렬적으로 불러오는방법임
+ // 여기서 중요한 점은 <Suspense>로 감싸준점!!! 각각 컴포넌트로 정리해주고 render해줌
 
 export default async function MovieDetail({ 
     params: {id},
